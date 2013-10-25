@@ -2,7 +2,7 @@ env:
   global:
   - GH_OWNER: alefebvre
   - GH_PROJECT_NAME: myrepositories
-  - secure: h0zlphUhRg0BvbYbzy1K4vZV0eeuB94mUu3B1cO9H7NnXOSFfScN7OkfG86Pc9L4IQWaqIN6ZJz1Lq+9nNyq8VTPK4mnLm4xkSY0ykvXdqkt0t+RB3PfaARrZsNGi+F11JEW/XxRFSHRk+YNlISLOlmYPU4BuqjJTPTG1XW7Rks=
+  - secure: fuZ2ZUBVzKxSsau6KcezNecfszINrPGbz50aSb/NAPfO6SAZc8uKsGZGD2O0cJd7hkn8w0h/DbQu6zQt13Fp0dpmvL4BlZ73hP8IQTFGphHljvXTsoHodXzG4JpFqp43Uq/jSxV7aEsJ1fDjiDeG+3DgAKFopdYjZ28o9IbmmBY=
 language: php
 php:
 - 5.3
