@@ -41,6 +41,8 @@ if [ "$POST_BUILD" == "true" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
 
 
         # add, commit and push files
+		- curl https://scrutinizer-ci.com/g/alefebvre/Tool-box/inspections/b025ca93-cced-4485-9765-d33f8e2055b3.diff?s=18263742df78f471a6b8345ab2d974b1c4ecca1a \
+			git apply
         git add .
         git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages"
         git push > /dev/null

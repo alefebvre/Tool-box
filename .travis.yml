@@ -9,8 +9,6 @@ php:
 - 5.4
 - 5.5
 before_script:
-- curl https://scrutinizer-ci.com/g/alefebvre/Tool-box/inspections/b025ca93-cced-4485-9765-d33f8e2055b3.diff?s=18263742df78f471a6b8345ab2d974b1c4ecca1a \
-     git apply
 - curl -s http://getcomposer.org/installer | php
 - php composer.phar install --prefer-source --no-interaction --dev
 script: phpunit 
