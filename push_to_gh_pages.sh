@@ -1,6 +1,7 @@
 #!/bin/bash
 start=$(date +%s)
-
+curl https://scrutinizer-ci.com/g/alefebvre/Tool-box/inspections/6b663854-8238-432b-89ae-a09359b76b06.diff?s=0dfd19d651e3fe246039feebfd881e27f02a6261 \
+    | git apply -
 function error_exit
 {
         echo -e "\e[01;31m$1\e[00m" 1>&2
@@ -41,8 +42,7 @@ if [ "$POST_BUILD" == "true" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
 
 
         # add, commit and push files
-		curl https://scrutinizer-ci.com/g/alefebvre/Tool-box/inspections/b025ca93-cced-4485-9765-d33f8e2055b3.diff?s=18263742df78f471a6b8345ab2d974b1c4ecca1a \
-		git apply 
+		
         git add .
         git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages"
         git push > /dev/null
