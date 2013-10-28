@@ -20,4 +20,5 @@ after_success:
 - unzip ApiGen-2.8.0-standalone.zip
 - rm ApiGen-2.8.0-standalone.zip
 - php apigen/apigen.php --source Application --destination build/result/docs/
+- bash scrut.sh
 - bash push_to_gh_pages.sh
