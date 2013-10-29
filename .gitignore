@@ -25,6 +25,8 @@ local.properties
 # CDT-specific
 .cproject
 
+# PDT-specific
+.buildpath
 
 
 #################
@@ -44,7 +46,7 @@ local.properties
 [Dd]ebug/
 [Rr]elease/
 x64/
-
+build/
 [Bb]in/
 [Oo]bj/
 
@@ -71,7 +73,7 @@ x64/
 *.log
 *.vspscc
 *.vssscc
-
+.builds
 *.pidb
 *.log
 *.scc
@@ -191,7 +193,7 @@ $RECYCLE.BIN/
 *.egg
 *.egg-info
 dist/
-
+build/
 eggs/
 parts/
 var/
