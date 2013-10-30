@@ -7,21 +7,21 @@ class SDIS62_Controller_Action_OauthConsumer extends Zend_Controller_Action
      *
      * @var Zend_Oauth_Consumer
      */
-	private $consumer = null;
+private $consumer = null;
     
     /**
      * The configuration file.
      *
      * @var string
      */
-	protected $config_file = null;
+protected $config_file = null;
     
     /**
      * Array which represents the redirection URL after obtain an access token. ($action, $controller = null, $module = null, array $params = array())
      *
      * @var array
      */
-	protected $stock_access_token_url = array("index", "index");
+protected $stock_access_token_url = array("index", "index");
 
     /**
      * Initialize object
@@ -30,8 +30,7 @@ class SDIS62_Controller_Action_OauthConsumer extends Zend_Controller_Action
      */
     public function init()
     {
-        if($this->config_file == null)
-        {
+         if($this->config_file == null) {
             $this->config_file = new Zend_Config_Ini(APPLICATION_PATH . DIRECTORY_SEPARATOR . "configs" . DIRECTORY_SEPARATOR . "secret.ini", APPLICATION_ENV);
         }
 
@@ -39,12 +38,12 @@ class SDIS62_Controller_Action_OauthConsumer extends Zend_Controller_Action
         $secret_oauth_config = array(
             'callbackUrl' => $this->config_file->oauth->callback,
             'siteUrl' => $this->config_file->oauth->siteurl,
-			'consumerKey' => $this->config_file->oauth->consumerkey, // consumer key
+            'consumerKey' => $this->config_file->oauth->consumerkey, // consumer key
 			'consumerSecret' => $this->config_file->oauth->consumersecret // consumer secret
         );
 
         // Initialize consumer object with config array
-		$this->consumer = new Zend_Oauth_Consumer($secret_oauth_config);
+         $this->consumer = new Zend_Oauth_Consumer($secret_oauth_config);
     }
 
     /**
