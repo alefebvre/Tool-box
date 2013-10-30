@@ -31,7 +31,7 @@ class SDIS62_Layout_Controller_Plugin_Layout extends Zend_Layout_Controller_Plug
      *
      * @return string
      */
-    private function getModulePath() 
+     private function getModulePath()
     {
         $module = $this->request->getModuleName();
         
