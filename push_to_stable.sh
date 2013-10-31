@@ -1,11 +1,5 @@
 #!/bin/bash
-start=$(date +%s)
 
-function error_exit
-{
-        echo -e "\e[01;31m$1\e[00m" 1>&2
-        exit 1
-}
 
 
 
