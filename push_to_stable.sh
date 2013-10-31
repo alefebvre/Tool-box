@@ -7,7 +7,7 @@ if [ -n "$exists" ]; then
 	else echo 'Not exists'
 fi
 
-  cp -Rv /Application  $HOME/Application 
+  cp -Rv /Application /Application 
   
           # go to home and setup git
         cd $HOME
@@ -30,7 +30,7 @@ fi
         
 
         # copy stuff
-        cp -Rv $HOME/Application
+        cp -Rv Application/
 
 
         # add, commit and push files
@@ -39,12 +39,7 @@ fi
         git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to stable"
         git push > /dev/null
         echo -e "Pushed to GitHub"
-else
-        echo "Something went wrong..."
-        echo "Additional info:"
-        echo "$TRAVIS_PULL_REQUEST"
-        echo "$POST_BUILD"
-        ls -la
+
 fi
 
 end=$(date +%s)
@@ -52,4 +47,4 @@ elapsed=$(( $end - $start ))
 minutes=$(( $elapsed / 60 ))
 seconds=$(( $elapsed % 60 ))
 echo "Post-Build process finished in $minutes minute(s) and $seconds seconds"
-read
+
