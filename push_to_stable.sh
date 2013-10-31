@@ -7,7 +7,7 @@ if [ -n "$exists" ]; then
 	else echo 'Not exists'
 fi
 
-  cp -Rv build/result/Application  $HOME/build/Application 
+  cp -Rv /Application  $HOME/Application 
   
           # go to home and setup git
         cd $HOME
@@ -30,7 +30,7 @@ fi
         
 
         # copy stuff
-        cp -Rv $HOME/build/Application
+        cp -Rv $HOME/Application
 
 
         # add, commit and push files
