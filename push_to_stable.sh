@@ -23,7 +23,7 @@
         
 
         # copy stuff
-        cp -Rv $HOME/Application
+        cp -Rv  $HOME/Application Application
 
 
         # add, commit and push files
