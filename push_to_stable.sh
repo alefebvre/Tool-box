@@ -1,7 +1,16 @@
 #!/bin/bash
+start=$(date +%s)
+
+function error_exit
+{
+        echo -e "\e[01;31m$1\e[00m" 1>&2
+        exit 1
+}
 
 
 
+if [ "$POST_BUILD" == "true" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+        echo -e "Starting to update stable"
   cp -Rv Application $HOME/Application
   
           # go to home and setup git
@@ -20,7 +29,7 @@
         git checkout stable
         
         # Remove "old" stuff
-        rm -rf Application
+        rm -rf $HOME/Application
     
         
 
@@ -30,15 +39,12 @@
 
         # add, commit and push files
 		
-        git add .
+        git add *
         git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to stable"
         git push > /dev/null
         echo -e "Pushed to GitHub"
 
 
-end=$(date +%s)
-elapsed=$(( $end - $start ))
-minutes=$(( $elapsed / 60 ))
-seconds=$(( $elapsed % 60 ))
+
 echo "Post-Build process finished in $minutes minute(s) and $seconds seconds"
 
