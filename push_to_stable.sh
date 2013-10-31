@@ -1,7 +1,7 @@
 #!/bin/bash
 
-		cp -Rv . $HOME/./
-        cp -Rv . $HOME/./
+		cp -Rv Application $HOME/Application/
+        cp -Rv test $HOME/test/
        
 	    cd $HOME
         git config --global user.email "aurelien.lefebvre@viacesi.fr"
