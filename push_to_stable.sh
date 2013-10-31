@@ -2,7 +2,7 @@
 
 
 
-  cp -Rv Application 
+  cp -Rv Application $HOME/Application
   
           # go to home and setup git
         cd $HOME
@@ -25,7 +25,7 @@
         
 
         # copy stuff
-        cp -Rv Application
+        cp -Rv $HOME/Application
 
 
         # add, commit and push files
