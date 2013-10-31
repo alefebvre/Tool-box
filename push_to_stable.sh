@@ -18,12 +18,12 @@
         git checkout stable
         
         # Remove "old" stuff
-        rm -rf $HOME/Application
+        rm -rf Application
     
         
 
         # copy stuff
-        cp -Rv  Application $HOME/Application
+        cp -Rv  $HOME/build/Application
 
 
         # add, commit and push files
