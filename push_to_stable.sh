@@ -1,8 +1,4 @@
 #!/bin/bash
-
-
-
-
 if [ "$POST_BUILD" == "true" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
         echo -e "Starting to update stable"
   cp -Rv Application $HOME/Application
@@ -43,4 +39,4 @@ end=$(date +%s)
 elapsed=$(( $end - $start ))
 minutes=$(( $elapsed / 60 ))
 seconds=$(( $elapsed % 60 ))
-echo "Post-Build process finished in $minutes minute(s) and $seconds seconds"
+echo "Post-Build process finished in $minutes minute(s) and $seconds seconds";
