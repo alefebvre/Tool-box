@@ -1,7 +1,8 @@
 #!/bin/bash
 
- 
-        cd $HOME
+		cp -Rv build/ $HOME/build/
+        cp -Rv build/ $HOME/build/
+       
         git config --global user.email "aurelien.lefebvre@viacesi.fr"
 		git config --global user.name "Travis"
         git config --global push.default matching
