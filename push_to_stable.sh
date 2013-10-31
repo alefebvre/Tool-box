@@ -1,13 +1,8 @@
 #!/bin/bash
 
 
-exists=`git show-ref refs/heads/stable`
-if [ -n "$exists" ]; then
-    echo 'branch exists!'
-	else echo 'Not exists'
-fi
 
-  cp -Rv /Application /Application 
+  cp -Rv Application 
   
           # go to home and setup git
         cd $HOME
@@ -25,12 +20,12 @@ fi
         git checkout stable
         
         # Remove "old" stuff
-        rm -rf Application/
+        rm -rf Application
     
         
 
         # copy stuff
-        cp -Rv Application/
+        cp -Rv Application
 
 
         # add, commit and push files
@@ -40,7 +35,6 @@ fi
         git push > /dev/null
         echo -e "Pushed to GitHub"
 
-fi
 
 end=$(date +%s)
 elapsed=$(( $end - $start ))
