@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #################
 ## Eclipse
 #################
@@ -214,7 +213,3 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
-=======
-vendor/
-phpunit.xml
->>>>>>> fcfef520644b3d15fee53e8da42a64b6c95b14f1
