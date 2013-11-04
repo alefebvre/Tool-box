@@ -1,0 +1,14 @@
+foobar
+
+-- FILENAME --
+README.txt
+
+-- CONFIG --
+tools:
+    custom_commands:
+        -
+            scope: file
+            command: "php %dir%/Fixture/check.php %pathname%"
+
+-- COMMENTS --
+Line 1: foobar

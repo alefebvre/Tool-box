@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "name": "sdis62/toolbox",
     "description": "SDIS 62 PHP library.",
     "keywords": [
@@ -30,3 +31,40 @@
         ""
     ]
 }
+=======
+    "name": "scrutinizer/scrutinizer",
+    "description": "A library for gathering code analysis results",
+    "license": "Apache2",
+
+    "repositories": [
+        {"type": "git", "url": "git://github.com/schmittjoh/Process"}
+    ],
+
+    "bin": ["bin/scrutinizer"],
+
+    "require": {
+        "php": ">=5.4",
+        "scrutinizer/utils": "dev-master",
+        "symfony/config": "2.*",
+        "symfony/console": "2.*",
+        "symfony/process": "~2.1@dev",
+        "symfony/finder": "2.1.*",
+        "symfony/yaml": "2.*",
+        "symfony/filesystem": "2.*",
+        "symfony/event-dispatcher": "~2.0",
+        "monolog/monolog": "1.2.*",
+        "psr/log": "1.0.0",
+        "phpoption/phpoption": "~1.0@dev",
+        "jms/serializer": "dev-master",
+        "jms/php-manipulator": "dev-master",
+        "phpcollection/phpcollection": "0.2.*@dev",
+        "guzzle/guzzle": "~3.0",
+        "nikic/php-parser": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "Scrutinizer": "src/" 
+        }
+    }
+}
+>>>>>>> fcfef520644b3d15fee53e8da42a64b6c95b14f1

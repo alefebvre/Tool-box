@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 env:
   global:
   - GH_OWNER: alefebvre
@@ -23,3 +24,19 @@ after_success:
 - bash scrut.sh
 - bash push_to_stable.sh
 - bash push_to_gh_pages.sh
+=======
+language: php
+
+php:
+  - 5.4
+
+before_script:
+    - curl -s http://getcomposer.org/installer | php
+    - php composer.phar install --dev
+
+script: phpunit --coverage-clover clover
+
+after_success:
+    - curl -sL https://bit.ly/artifact-uploader | php
+
+>>>>>>> fcfef520644b3d15fee53e8da42a64b6c95b14f1
