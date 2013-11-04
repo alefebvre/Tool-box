@@ -1,0 +1,75 @@
+<?php
+
+function foo() {
+    echo 'Hello';
+}
+
+$foo = function() {
+
+};
+
+class Foo {
+    public function foo() {
+        echo 'asdf';
+    }
+
+    public static function bar() {
+        echo 'asdf';
+    }
+}
+
+-- FILENAME --
+Foo.php
+
+-- FILE: Bar.php --
+<?php
+
+abstract class Bar {
+    abstract public function bar();
+    abstract protected function baz();
+}
+
+class Baz extends Bar {
+    public function bar() {
+        echo 'asdf';
+        if ('a' == 'b') {
+            echo 'asdf'; echo 'moo';
+        }
+    }
+
+    public function baz() {
+        // no-op
+    }
+}
+
+interface IFace { }
+trait SomeTrait { }
+
+-- FILE: config.yml --
+foo: bar
+
+-- CONFIG --
+tools:
+    php_loc: ~
+
+-- PROJECT-METRICS --
+php_loc.lines_of_code: 39
+php_loc.lines_of_comments: 2
+php_loc.cyclomatic_complexity: 1
+php_loc.cyclomatic_complexity_in_methods: 1
+php_loc.interfaces: 1
+php_loc.traits: 1
+php_loc.classes: 3
+php_loc.abstract_classes: 1
+php_loc.concrete_classes: 2
+php_loc.functions: 1
+php_loc.anonymous_functions: 1
+php_loc.methods: 6
+php_loc.public_methods: 5
+php_loc.non_public_methods: 1
+php_loc.non_static_methods: 5
+php_loc.static_methods: 1
+php_loc.constants: 0
+php_loc.class_constants: 0
+php_loc.global_constants: 0
+php_loc.average_cyclomatic_complexity_per_method: 1.1666666666667
